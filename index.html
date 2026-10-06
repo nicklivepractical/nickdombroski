@@ -117,7 +117,7 @@ h1 .ln{display:block}
 .now{display:flex;flex-wrap:wrap;align-items:center;gap:8px 26px;margin-top:40px;font-size:.9rem;color:var(--muted)}
 .now b{color:var(--ink);font-weight:600}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-@media (max-width:560px){.tiles{grid-template-columns:1fr}}
+@media (max-width:560px){.tiles{grid-template-columns:1fr}#home .tag{font-size:1.3rem}}
 @media (prefers-reduced-motion:reduce){.r{opacity:1;transform:none}.view.on .r,.dot{animation:none}.rot,.tile{transition:none}}
 footer{margin-top:auto;padding-top:64px;font-size:.9rem;color:var(--muted)}
 footer a{text-decoration:none;border-bottom:1px solid var(--line)}
@@ -135,7 +135,7 @@ footer a{text-decoration:none;border-bottom:1px solid var(--line)}
 <main>
 <section class="view" id="home">
  <h1><span class="ln r" style="--i:0">Nick</span><span class="ln r" style="--i:1">Dombroski</span></h1>
- <p class="tag r" style="--i:2;max-width:22ch">Growth marketer in Austin. I build <span class="rot" id="rot">lifecycle programs</span>.</p>
+ <p class="tag r" style="--i:2;max-width:none">Growth marketer in Austin.<br>I build <span class="rot" id="rot">lifecycle campaigns</span>.</p>
  <p class="sub r" style="--i:3;max-width:48ch">I plan campaigns, launch them, and write down what the numbers taught me.</p>
  <div class="tiles">
   <a class="tile r" style="--i:4" href="#about"><b>About</b><span>Selling things since before I could drive a car</span></a>
@@ -272,7 +272,7 @@ footer a{text-decoration:none;border-bottom:1px solid var(--line)}
 <script>
 (function(){
  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
- var el=document.getElementById('rot'),w=['lifecycle programs','launch plans','email and SMS flows','crowdfunding campaigns','systems that keep earning'],i=0;
+ var el=document.getElementById('rot'),w=['lifecycle campaigns','systems that earn','ads that convert','lists that produce','creative that holds attention','launches that land'],i=0;
  setInterval(function(){
   if(!el.offsetParent)return;
   el.classList.add('out');
